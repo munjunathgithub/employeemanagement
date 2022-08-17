@@ -41,7 +41,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 	public Employee updateEmployee(Employee employee, Integer id) {
 		 //we will check weather the employee exists with the given id or not
 		Employee existingEmployee = employeeRepository.findById(id).orElseThrow(
-				()-> new ResourceNotFoundException("Employee", "id", id));
+		()-> new ResourceNotFoundException("Employee", "id", id));
 		existingEmployee.setFirstName(employee.getFirstName());
 		existingEmployee.setFirstName(employee.getLastName());
 		existingEmployee.setFirstName(employee.getEmail());
